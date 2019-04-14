@@ -1,0 +1,28 @@
+.container{
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto
+}
+.login{
+    width: 450px;
+    padding: 2.3em;
+}
+.login-title{
+    color: #003b49;
+}
+.btn-primary{
+    background-color: hsl(18, 98%, 50%)!important;
+    border-color: #fc4c02 !important;
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active{
+    background-color: transparent !important;
+    border-color: #fc4c02 !important;
+    color: #000 !important;
+}
+.login-btn{
+    border-radius: 30px !important;
+}
