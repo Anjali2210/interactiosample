@@ -22,7 +22,6 @@ class Login extends Component {
         this.setState({ password: e.target.value })
     }
 
-
     postData = async event => {
         event.preventDefault();
         const { username, password } = this.state;
