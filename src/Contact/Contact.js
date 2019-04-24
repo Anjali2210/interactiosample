@@ -2,7 +2,6 @@ import React from 'react'
 import './Contact.css'
 import axios from 'axios';
 
-
 class Contact extends React.Component {
   constructor(props) {
     super(props)
@@ -10,19 +9,10 @@ class Contact extends React.Component {
     this.state = {
       contacts: []
     }
-    console.log(localStorage.getItem('authtoken'));
-
   }
 
   componentDidMount() {
 
-    // axios.get('https://internal-api-staging-lb.interact.io/v2/lists/3541/contacts', {
-    //   "authToken": localStorage.getItem('authtoken').toString(),
-    //   "listId": "3541",
-    //   "orderBy": "listOrder",
-    //   "limit": 25,
-    //   "orderDirection": "DESC"
-    // })
     const auth = {
       headers: { "authToken": localStorage.getItem('authtoken') }
     }
@@ -38,20 +28,21 @@ class Contact extends React.Component {
               console.log(err)
             })
         }
-      }
-      )
+      })
       .catch((err) => {
         console.log(err)
       })
   }
+
+  /* ----LOGOUT----- */
   logout = () => {
     console.log("logout");
     document.cookie = "authenticated= ";
     localStorage.setItem("authtoken", '')
     window.location.href = '/login'
   }
+
   render() {
-    //const { username} = this.prop.state;
     return (
       <div>
         <nav className="navbar navbar-light bg-light">

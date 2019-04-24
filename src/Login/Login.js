@@ -6,13 +6,10 @@ class Login extends Component {
     constructor(props) {
         super(props)
 
-        console.log(props)
-
         this.state = {
             username: "",
             password: "",
             status: "false",
-            authtok :"",
             error: false
         };
     }
@@ -29,17 +26,10 @@ class Login extends Component {
     postData = async event => {
         event.preventDefault();
         const { username, password } = this.state;
-        console.log(username)
-        console.log(password)
-
-
-       
-
         let data = {
             username: username,
             password: password
-        }
-
+        }   
         let axiosConfig = {
             headers:
             {
