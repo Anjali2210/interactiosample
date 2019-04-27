@@ -15,4 +15,6 @@
 
 `npm start`
 
+* Hit http://localhost:3000/login
+
 
