@@ -7,7 +7,7 @@
 
 * Install bootstrap as it's used for ease of building UI
 
-`npm install bootstrap`
+`npm install --save bootstrap`
 
 * Make sure you run the project in safari and disable the Cross origin Restrictions
 
