@@ -59,9 +59,9 @@ class Contact extends React.Component {
     const { contacts,currentPage, countPerPage } = this.state;
 
     // Logic for displaying Per Page counts
-    const indexOfLastCount = currentPage * countPerPage;
-    const indexOfFirstCount = indexOfLastCount - countPerPage;
-    const currentCounts = contacts.slice(indexOfFirstCount, indexOfLastCount);
+    const indexOfLastContact = currentPage * countPerPage;
+    const indexOfFirstContact = indexOfLastContact - countPerPage;
+    const currentContacts = contacts.slice(indexOfFirstContact, indexOfLastContact);
 
     // Logic for displaying page numbers
     const pageNumbers = [];
@@ -104,8 +104,8 @@ class Contact extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {currentCounts &&
-                  currentCounts.map((contact, index) => (
+                {currentContacts &&
+                  currentContacts.map((contact, index) => (
                     <tr key={index}>
                       <td >{index+1}</td>
                       <td>{contact.contactType === "COMPANY" ? contact.companyName : contact.firstName+" "+contact.lastName}</td>
